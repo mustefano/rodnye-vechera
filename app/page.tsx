@@ -236,7 +236,7 @@ function SectionHeading({
 function BrandMark() {
   return (
     <a href="#top" className="group flex items-center gap-3">
-      <span className="grid h-11 w-11 place-items-center rounded-2xl bg-burgundy text-cream shadow-[0_16px_36px_rgba(116,37,47,0.22)] transition-transform group-hover:-translate-y-0.5">
+      <span className="grid h-11 w-11 place-items-center rounded-2xl bg-burgundy text-cream shadow-[0_16px_36px_rgba(149,113,79,0.22)] transition-transform group-hover:-translate-y-0.5">
         <svg
           aria-hidden="true"
           viewBox="0 0 40 40"
@@ -263,8 +263,8 @@ function BrandMark() {
 function HeroCover() {
   return (
     <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[470px]">
-      <div className="absolute inset-0 rounded-[2.2rem] bg-[linear-gradient(145deg,#fff9ed,#f0d2aa_58%,#8f3f44)] shadow-[0_30px_80px_rgba(91,52,35,0.2)]" />
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/60 p-3 shadow-[0_30px_80px_rgba(91,52,35,0.22)] backdrop-blur">
+      <div className="absolute inset-0 rounded-[2.2rem] bg-[linear-gradient(145deg,#EADED0,#C7AF94_58%,#95714F)] shadow-[0_30px_80px_rgba(149,113,79,0.20)]" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-cream/70 bg-cream/60 p-3 shadow-[0_30px_80px_rgba(149,113,79,0.22)] backdrop-blur">
         <div className="absolute inset-0 paper-noise opacity-25" />
         <div className="relative overflow-hidden rounded-[1.6rem]">
           <Image
@@ -286,7 +286,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-[2rem] border border-white/70 bg-[linear-gradient(145deg,#fff9ed,#f0d2aa_55%,#8f3f44)] shadow-[0_30px_80px_rgba(91,52,35,0.22)] ${
+      className={`relative overflow-hidden rounded-[2rem] border border-cream/70 bg-[linear-gradient(145deg,#EADED0,#C7AF94_55%,#95714F)] shadow-[0_30px_80px_rgba(149,113,79,0.22)] ${
         isSmall ? "aspect-[4/3] p-4" : "aspect-[4/5] p-5"
       }`}
     >
@@ -310,14 +310,14 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
               isSmall ? "text-2xl" : "text-3xl"
             }`}
           >
-            Родные вечера
+            Ностальгия красками
           </p>
           <p className={`${isSmall ? "mt-1 text-xs" : "mt-2 text-sm"} text-cocoa/60`}>
-            выпуск с семейными сценами
+            выпуск с тёплыми сценами
           </p>
         </div>
         <div
-          className={`relative mx-auto w-full max-w-72 rounded-3xl bg-[linear-gradient(180deg,#f8e6c9,#f3c784)] shadow-[inset_0_0_0_1px_rgba(99,63,40,0.13)] ${
+          className={`relative mx-auto w-full max-w-72 rounded-3xl bg-[linear-gradient(180deg,#C7AF94,#C7AF94)] shadow-[inset_0_0_0_1px_rgba(140,145,108,0.13)] ${
             isSmall ? "mt-3 h-28" : "mb-2 mt-5 h-48"
           }`}
         >
@@ -332,15 +332,15 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
             />
             <path
               d="M61 102v57h158v-57"
-              className="fill-[#fff7e8] stroke-current stroke-[4]"
+              className="fill-[#EADED0] stroke-current stroke-[4]"
             />
-            <path d="M119 159v-39h42v39" className="fill-[#d79a5e] stroke-current stroke-[3]" />
-            <path d="M83 122h24v20H83zM174 122h24v20h-24z" className="fill-[#f8ce75] stroke-current stroke-[3]" />
+            <path d="M119 159v-39h42v39" className="fill-[#95714F] stroke-current stroke-[3]" />
+            <path d="M83 122h24v20H83zM174 122h24v20h-24z" className="fill-[#C7AF94] stroke-current stroke-[3]" />
             <path d="M52 166h178" className="fill-none stroke-current stroke-[4] stroke-linecap-round" />
-            <path d="M218 83c16 5 24 15 22 30" className="fill-none stroke-[#5d7b54] stroke-[4] stroke-linecap-round" />
+            <path d="M218 83c16 5 24 15 22 30" className="fill-none stroke-[#8C916C] stroke-[4] stroke-linecap-round" />
           </svg>
           <div
-            className={`absolute left-5 rounded-b-3xl rounded-t-lg border-2 border-cocoa/60 bg-white/45 ${
+            className={`absolute left-5 rounded-b-3xl rounded-t-lg border-2 border-cocoa/60 bg-cream/45 ${
               isSmall ? "-bottom-3 h-10 w-14" : "-bottom-4 h-14 w-20"
             }`}
           >
@@ -363,9 +363,9 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
             isSmall ? "mt-3 text-[0.65rem]" : "text-xs"
           }`}
         >
-          <span className="rounded-full bg-white/70 px-2 py-2">А4</span>
-          <span className="rounded-full bg-white/70 px-2 py-2">25 сцен</span>
-          <span className="rounded-full bg-white/70 px-2 py-2">подарок</span>
+          <span className="rounded-full bg-cream/70 px-2 py-2">А4</span>
+          <span className="rounded-full bg-cream/70 px-2 py-2">25 сцен</span>
+          <span className="rounded-full bg-cream/70 px-2 py-2">подарок</span>
         </div>
       </div>
     </div>
@@ -377,9 +377,9 @@ function LineArt({ colored = false }: { colored?: boolean }) {
     <div
       className={`relative overflow-hidden rounded-[1.75rem] border border-caramel/20 ${
         colored
-          ? "bg-[linear-gradient(135deg,#ffe7b5,#d99b63_48%,#6f8a5f)]"
-          : "bg-[#fffaf0]"
-      } p-5 shadow-[0_22px_55px_rgba(91,52,35,0.14)]`}
+          ? "bg-[linear-gradient(135deg,#C7AF94,#95714F_48%,#8C916C)]"
+          : "bg-[#EADED0]"
+      } p-5 shadow-[0_22px_55px_rgba(149,113,79,0.14)]`}
     >
       <div className="absolute inset-0 paper-noise opacity-60" />
       <svg
@@ -392,24 +392,24 @@ function LineArt({ colored = false }: { colored?: boolean }) {
         <path d="M35 188h290" className="fill-none stroke-current stroke-[4]" />
         <path
           d="M74 188V87h212v101"
-          className={`${colored ? "fill-[#f8d59a]" : "fill-none"} stroke-current stroke-[4]`}
+          className={`${colored ? "fill-[#C7AF94]" : "fill-none"} stroke-current stroke-[4]`}
         />
         <path
           d="M99 111h44v37H99zM211 111h44v37h-44z"
-          className={`${colored ? "fill-[#ffd977]" : "fill-none"} stroke-current stroke-[3]`}
+          className={`${colored ? "fill-[#C7AF94]" : "fill-none"} stroke-current stroke-[3]`}
         />
         <path
           d="M153 188v-57h55v57"
-          className={`${colored ? "fill-[#9b4d42]" : "fill-none"} stroke-current stroke-[3]`}
+          className={`${colored ? "fill-[#95714F]" : "fill-none"} stroke-current stroke-[3]`}
         />
         <path
           d="M64 87 180 32l116 55"
-          className={`${colored ? "fill-[#7b382e]" : "fill-none"} stroke-current stroke-[4]`}
+          className={`${colored ? "fill-[#95714F]" : "fill-none"} stroke-current stroke-[4]`}
         />
         <path d="M59 207c38-16 69-16 99 0s67 18 120-4" className="fill-none stroke-current stroke-[3]" />
         <path
           d="M284 156c22-3 35 8 35 25M69 155c-19 2-29 12-31 29"
-          className={`fill-none ${colored ? "stroke-[#55734e]" : "stroke-current"} stroke-[4]`}
+          className={`fill-none ${colored ? "stroke-[#8C916C]" : "stroke-current"} stroke-[4]`}
         />
       </svg>
     </div>
@@ -418,16 +418,16 @@ function LineArt({ colored = false }: { colored?: boolean }) {
 
 function GalleryArtwork({ label, index }: { label: string; index: number }) {
   const themes = [
-    "from-[#fff6df] via-[#e6b878] to-[#7d3f3e]",
-    "from-[#f7efd8] via-[#c9b06f] to-[#5d7b54]",
-    "from-[#fff3d6] via-[#f0c46d] to-[#9d5d37]",
-    "from-[#f7e4c2] via-[#d99b63] to-[#6f8a5f]",
-    "from-[#fff8e8] via-[#f0c46d] to-[#74252f]",
-    "from-[#fffaf0] via-[#ddb889] to-[#824a31]",
+    "from-[#EADED0] via-[#C7AF94] to-[#95714F]",
+    "from-[#EADED0] via-[#C7AF94] to-[#8C916C]",
+    "from-[#EADED0] via-[#ACB087] to-[#95714F]",
+    "from-[#C7AF94] via-[#95714F] to-[#8C916C]",
+    "from-[#EADED0] via-[#ACB087] to-[#95714F]",
+    "from-[#EADED0] via-[#C7AF94] to-[#95714F]",
   ];
 
   return (
-    <div className="group relative min-h-64 overflow-hidden rounded-[1.7rem] border border-white/70 bg-white p-3 shadow-[0_24px_60px_rgba(91,52,35,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(91,52,35,0.18)]">
+    <div className="group relative min-h-64 overflow-hidden rounded-[1.7rem] border border-cream/70 bg-cream p-3 shadow-[0_24px_60px_rgba(149,113,79,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.18)]">
       <div className={`relative h-full overflow-hidden rounded-[1.35rem] bg-gradient-to-br ${themes[index]}`}>
         <div className="absolute inset-0 paper-noise opacity-50" />
         <svg
@@ -436,9 +436,9 @@ function GalleryArtwork({ label, index }: { label: string; index: number }) {
           className="absolute inset-0 h-full w-full p-7 text-cocoa/55 transition duration-300 group-hover:scale-[1.03]"
         >
           <path d="M31 170h236" className="fill-none stroke-current stroke-[4]" />
-          <path d="M64 170V82h156v88" className="fill-[#fff8eb]/70 stroke-current stroke-[4]" />
+          <path d="M64 170V82h156v88" className="fill-[#EADED0]/70 stroke-current stroke-[4]" />
           <path d="M51 85 142 35l91 50" className="fill-none stroke-current stroke-[5]" />
-          <path d="M91 106h35v28H91zM160 106h35v28h-35z" className="fill-[#f8d476]/70 stroke-current stroke-[3]" />
+          <path d="M91 106h35v28H91zM160 106h35v28h-35z" className="fill-[#C7AF94]/70 stroke-current stroke-[3]" />
           <path d="M217 151c23-4 37 7 36 24M65 150c-17 1-27 9-29 25" className="fill-none stroke-current stroke-[4]" />
           <path d="M116 188c38-14 70-13 102 0" className="fill-none stroke-current stroke-[3]" />
         </svg>
@@ -460,11 +460,18 @@ export default function Home() {
     <main id="top" className="min-h-screen overflow-hidden bg-milk text-cocoa">
       <div className="fixed inset-0 -z-10 paper-noise opacity-70" />
 
-      <div className="bg-cocoa px-4 py-2 text-center text-sm font-medium text-cream">
-        Старт продаж уже в августе: музыкальный плейлист в каждом выпуске и бережная упаковка
+      <div className="sale-ribbon bg-cocoa px-4 py-3 text-center text-cream shadow-[0_10px_30px_rgba(149,113,79,0.22)]">
+        <span className="inline-flex flex-wrap items-center justify-center gap-2 text-sm font-semibold sm:text-base">
+          <span className="sale-highlight rounded-full border border-cream/45 bg-cream/20 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-cream sm:text-sm">
+            Старт продаж уже в августе
+          </span>
+          <span className="text-cream/90">
+            музыкальный плейлист в каждом выпуске и бережная упаковка
+          </span>
+        </span>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-caramel/15 bg-milk/78 shadow-[0_14px_40px_rgba(91,52,35,0.08)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-caramel/15 bg-milk/78 shadow-[0_14px_40px_rgba(149,113,79,0.08)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <BrandMark />
           <nav className="hidden items-center gap-7 lg:flex">
@@ -481,7 +488,7 @@ export default function Home() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href="#request"
-              className="rounded-full bg-burgundy px-6 py-3 text-sm font-bold text-cream shadow-[0_16px_30px_rgba(116,37,47,0.2)] transition hover:-translate-y-0.5 hover:bg-[#5f1d27]"
+              className="rounded-full bg-burgundy px-6 py-3 text-sm font-bold text-cream shadow-[0_16px_30px_rgba(149,113,79,0.20)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
             >
               Заказать
             </a>
@@ -491,7 +498,7 @@ export default function Home() {
             aria-label="Открыть меню"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((value) => !value)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-caramel/30 bg-white/70 text-cocoa shadow-sm lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-caramel/30 bg-cream/70 text-cocoa shadow-sm lg:hidden"
           >
             <span className="relative h-4 w-5">
               <span
@@ -542,8 +549,8 @@ export default function Home() {
         <div className="absolute right-0 top-32 -z-10 h-[34rem] w-[34rem] rounded-full bg-sage/20 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="reveal">
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-caramel/25 bg-white/60 px-4 py-2 text-sm font-semibold text-cocoa shadow-sm backdrop-blur">
-              <span className="h-2.5 w-2.5 rounded-full bg-lamp shadow-[0_0_18px_rgba(246,196,86,0.9)]" />
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-caramel/25 bg-cream/60 px-4 py-2 text-sm font-semibold text-cocoa shadow-sm backdrop-blur">
+              <span className="h-2.5 w-2.5 rounded-full bg-lamp shadow-[0_0_18px_rgba(172,176,135,0.90)]" />
               Авторские раскраски по номерам для спокойных вечеров
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-cocoa sm:text-6xl lg:text-7xl">
@@ -561,13 +568,13 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#catalog"
-                className="rounded-full bg-burgundy px-8 py-4 text-center text-base font-bold text-cream shadow-[0_18px_38px_rgba(116,37,47,0.25)] transition hover:-translate-y-0.5 hover:bg-[#5f1d27]"
+                className="rounded-full bg-burgundy px-8 py-4 text-center text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.25)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
               >
                 Выбрать выпуск
               </a>
               <a
                 href="#gallery"
-                className="rounded-full border border-caramel/35 bg-white/70 px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/40 hover:text-burgundy"
+                className="rounded-full border border-caramel/35 bg-cream/70 px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/40 hover:text-burgundy"
               >
                 Посмотреть галерею
               </a>
@@ -576,7 +583,7 @@ export default function Home() {
               {heroBenefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 rounded-2xl border border-caramel/15 bg-white/55 px-4 py-3 text-sm font-semibold text-cocoa/78 shadow-sm backdrop-blur"
+                  className="flex items-center gap-3 rounded-2xl border border-caramel/15 bg-cream/55 px-4 py-3 text-sm font-semibold text-cocoa/78 shadow-sm backdrop-blur"
                 >
                   <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-lamp/70 text-burgundy">
                     ✓
@@ -602,7 +609,7 @@ export default function Home() {
             {reasons.map((reason) => (
               <article
                 key={reason.title}
-                className="reveal rounded-[1.75rem] border border-white/70 bg-white/68 p-6 shadow-[0_22px_60px_rgba(91,52,35,0.09)] backdrop-blur transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(91,52,35,0.14)]"
+                className="reveal rounded-[1.75rem] border border-cream/70 bg-cream/68 p-6 shadow-[0_22px_60px_rgba(149,113,79,0.09)] backdrop-blur transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.14)]"
               >
                 <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-lamp/45 text-burgundy">
                   <WarmIcon type={reason.icon} />
@@ -618,7 +625,7 @@ export default function Home() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="reveal">
-            <div className="relative rounded-[2rem] border border-white/80 bg-white/50 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
+            <div className="relative rounded-[2rem] border border-cream/80 bg-cream/50 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
               <div className="grid gap-4 sm:grid-cols-2">
                 <LineArt />
                 <div className="hidden sm:block">
@@ -664,7 +671,7 @@ export default function Home() {
             title="Из чёрно-белой страницы - в тёплую историю"
             description="С каждым цветом обычный контур превращается в маленькое воспоминание."
           />
-          <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-white/75 bg-white/70 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
+          <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-cream/75 bg-cream/70 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
             <div className="relative overflow-hidden rounded-[1.55rem]">
               <LineArt />
               <div
@@ -676,7 +683,7 @@ export default function Home() {
                 </div>
               </div>
               <div
-                className="absolute inset-y-0 w-1 bg-cream shadow-[0_0_0_1px_rgba(116,37,47,0.25),0_0_30px_rgba(246,196,86,0.9)]"
+                className="absolute inset-y-0 w-1 bg-cream shadow-[0_0_0_1px_rgba(149,113,79,0.25),0_0_30px_rgba(172,176,135,0.90)]"
                 style={{ left: `${compare}%` }}
               >
                 <div className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-burgundy text-sm font-bold text-cream shadow-xl">
@@ -697,7 +704,7 @@ export default function Home() {
               max="82"
               value={compare}
               onChange={(event) => setCompare(Number(event.target.value))}
-              className="mt-6 w-full accent-[#74252f]"
+              className="mt-6 w-full accent-[#95714F]"
             />
           </div>
         </div>
@@ -714,7 +721,7 @@ export default function Home() {
             {products.map((product) => (
               <article
                 key={product.name}
-                className="reveal group flex flex-col overflow-hidden rounded-[2rem] border border-white/75 bg-white/75 shadow-[0_26px_70px_rgba(91,52,35,0.11)] backdrop-blur transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_34px_85px_rgba(91,52,35,0.18)]"
+                className="reveal group flex flex-col overflow-hidden rounded-[2rem] border border-cream/75 bg-cream/75 shadow-[0_26px_70px_rgba(149,113,79,0.11)] backdrop-blur transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_34px_85px_rgba(149,113,79,0.18)]"
               >
                 <div className="p-4">
                   <ProductArtwork variant="small" />
@@ -750,7 +757,7 @@ export default function Home() {
                   </div>
                   <a
                     href="#request"
-                    className="mt-6 rounded-full bg-cocoa px-6 py-4 text-center text-sm font-bold text-cream shadow-[0_16px_34px_rgba(91,52,35,0.22)] transition group-hover:bg-burgundy"
+                    className="mt-6 rounded-full bg-cocoa px-6 py-4 text-center text-sm font-bold text-cream shadow-[0_16px_34px_rgba(149,113,79,0.22)] transition group-hover:bg-burgundy"
                   >
                     {product.button}
                   </a>
@@ -783,7 +790,7 @@ export default function Home() {
             {orderSteps.map((step, index) => (
               <div
                 key={step}
-                className="reveal relative rounded-[1.75rem] border border-caramel/15 bg-cream/70 p-6 shadow-[0_20px_55px_rgba(91,52,35,0.08)]"
+                className="reveal relative rounded-[1.75rem] border border-caramel/15 bg-cream/70 p-6 shadow-[0_20px_55px_rgba(149,113,79,0.08)]"
               >
                 <span className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-burgundy text-lg font-bold text-cream">
                   {index + 1}
@@ -802,7 +809,7 @@ export default function Home() {
             {deliveryCards.map((card) => (
               <article
                 key={card.title}
-                className="reveal rounded-[1.75rem] border border-white/70 bg-white/65 p-7 shadow-[0_22px_60px_rgba(91,52,35,0.09)]"
+                className="reveal rounded-[1.75rem] border border-cream/70 bg-cream/65 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
               >
                 <h3 className="text-2xl font-semibold text-cocoa">{card.title}</h3>
                 <p className="mt-4 leading-7 text-cocoa/67">{card.text}</p>
@@ -819,7 +826,7 @@ export default function Home() {
             {reviews.map((review, index) => (
               <figure
                 key={review}
-                className="reveal rounded-[1.75rem] border border-caramel/15 bg-white/72 p-7 shadow-[0_22px_60px_rgba(91,52,35,0.09)]"
+                className="reveal rounded-[1.75rem] border border-caramel/15 bg-cream/72 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
               >
                 <div className="mb-6 flex gap-1 text-lamp">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
@@ -847,7 +854,7 @@ export default function Home() {
               return (
                 <div
                   key={item.question}
-                  className="rounded-[1.5rem] border border-white/70 bg-white/70 shadow-[0_16px_45px_rgba(91,52,35,0.08)]"
+                  className="rounded-[1.5rem] border border-cream/70 bg-cream/70 shadow-[0_16px_45px_rgba(149,113,79,0.08)]"
                 >
                   <button
                     type="button"
@@ -880,7 +887,7 @@ export default function Home() {
       </section>
 
       <section id="request" className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.25rem] border border-white/70 bg-[linear-gradient(135deg,rgba(255,250,240,0.9),rgba(244,211,166,0.72))] p-5 shadow-[0_30px_90px_rgba(91,52,35,0.14)] md:p-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.25rem] border border-cream/70 bg-[linear-gradient(135deg,rgba(234,222,208,0.90),rgba(199,175,148,0.72))] p-5 shadow-[0_30px_90px_rgba(149,113,79,0.14)] md:p-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded-[1.75rem] bg-burgundy p-8 text-cream shadow-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-lamp">
               заявка
@@ -896,7 +903,7 @@ export default function Home() {
               способ оплаты.
             </div>
           </div>
-          <form className="grid gap-4 rounded-[1.75rem] bg-white/72 p-5 md:p-7">
+          <form className="grid gap-4 rounded-[1.75rem] bg-cream/72 p-5 md:p-7">
             <div className="grid gap-4 md:grid-cols-2">
               <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
                 Имя
@@ -935,12 +942,12 @@ export default function Home() {
               />
             </label>
             <label className="flex items-start gap-3 text-sm leading-6 text-cocoa/66">
-              <input type="checkbox" className="mt-1 accent-[#74252f]" />
+              <input type="checkbox" className="mt-1 accent-[#95714F]" />
               Я согласен с политикой конфиденциальности
             </label>
             <button
               type="button"
-              className="rounded-full bg-burgundy px-7 py-4 text-base font-bold text-cream shadow-[0_18px_38px_rgba(116,37,47,0.23)] transition hover:-translate-y-0.5 hover:bg-[#5f1d27]"
+              className="rounded-full bg-burgundy px-7 py-4 text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.23)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
             >
               Отправить заявку
             </button>
@@ -960,13 +967,13 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#request"
-                className="rounded-full bg-burgundy px-7 py-4 text-center font-bold text-cream shadow-[0_18px_38px_rgba(116,37,47,0.23)]"
+                className="rounded-full bg-burgundy px-7 py-4 text-center font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.23)]"
               >
                 Написать в Telegram
               </a>
               <a
                 href="#faq"
-                className="rounded-full border border-caramel/35 bg-white/70 px-7 py-4 text-center font-bold text-cocoa"
+                className="rounded-full border border-caramel/35 bg-cream/70 px-7 py-4 text-center font-bold text-cocoa"
               >
                 Задать вопрос
               </a>
@@ -976,7 +983,7 @@ export default function Home() {
             {contactItems.map(([label, value]) => (
               <div
                 key={label}
-                className="rounded-[1.5rem] border border-white/70 bg-white/70 p-6 shadow-[0_18px_50px_rgba(91,52,35,0.08)]"
+                className="rounded-[1.5rem] border border-cream/70 bg-cream/70 p-6 shadow-[0_18px_50px_rgba(149,113,79,0.08)]"
               >
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-burgundy">
                   {label}
@@ -991,7 +998,7 @@ export default function Home() {
       <footer className="bg-cocoa px-4 py-12 text-cream sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <h2 className="text-3xl font-semibold">Родные вечера</h2>
+            <h2 className="text-3xl font-semibold">Ностальгия красками</h2>
             <p className="mt-4 max-w-xl leading-7 text-cream/70">
               Авторские раскраски по номерам о доме, уюте и тёплых семейных
               историях.
