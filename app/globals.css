@@ -7,9 +7,9 @@
   --cream: #EADED0;
   --caramel: #C7AF94;
   --cocoa: #95714F;
-  --burgundy: #95714F;
-  --lamp: #ACB087;
-  --sage: #8C916C;
+  --burgundy: #8C916C;
+  --lamp: #C7AF94;
+  --sage: #ACB087;
   --earth: #95714F;
   --moss: #8C916C;
   --sand: #C7AF94;
@@ -43,10 +43,7 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 18% 8%, rgba(172, 176, 135, 0.24), transparent 24rem),
-    radial-gradient(circle at 82% 12%, rgba(140, 145, 108, 0.18), transparent 28rem),
-    var(--background);
+  background: #EADED0;
   color: var(--foreground);
   font-family:
     var(--font-site), "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
@@ -54,8 +51,8 @@ body {
 }
 
 ::selection {
-  background: rgba(140, 145, 108, 0.28);
-  color: var(--cocoa);
+  background: rgba(140, 145, 108, 0.32);
+  color: #95714F;
 }
 
 button,
@@ -66,10 +63,40 @@ textarea {
   font: inherit;
 }
 
+.palette-shell {
+  position: relative;
+  isolation: isolate;
+  background: #EADED0;
+}
+
+.palette-shell::before {
+  position: fixed;
+  inset: 0;
+  z-index: -4;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent 0 42%, rgba(172, 176, 135, 0.58) 42% 100%),
+    linear-gradient(180deg, rgba(149, 113, 79, 0.22) 0 34%, rgba(199, 175, 148, 0.36) 34% 66%, rgba(234, 222, 208, 0.92) 66% 100%);
+}
+
+.palette-shell::after {
+  position: fixed;
+  inset: -8rem;
+  z-index: -3;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 74% 18%, rgba(140, 145, 108, 0.35), transparent 22rem),
+    radial-gradient(circle at 19% 18%, rgba(199, 175, 148, 0.40), transparent 19rem),
+    radial-gradient(circle at 76% 80%, rgba(172, 176, 135, 0.38), transparent 24rem);
+  filter: blur(0.2px);
+}
+
 .paper-noise {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(149, 113, 79, 0.10) 1px, transparent 0),
-    linear-gradient(135deg, rgba(234, 222, 208, 0.56), rgba(199, 175, 148, 0.16));
+    radial-gradient(circle at 1px 1px, rgba(149, 113, 79, 0.12) 1px, transparent 0),
+    linear-gradient(135deg, rgba(234, 222, 208, 0.48), rgba(172, 176, 135, 0.16));
   background-size:
     18px 18px,
     100% 100%;
@@ -77,9 +104,10 @@ textarea {
 
 .section-band {
   position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(234, 222, 208, 0.84), rgba(199, 175, 148, 0.38)),
-    var(--milk);
+    linear-gradient(90deg, rgba(234, 222, 208, 0.94) 0%, rgba(172, 176, 135, 0.46) 58%, rgba(140, 145, 108, 0.30) 100%),
+    #EADED0;
 }
 
 .section-band::before {
@@ -87,10 +115,14 @@ textarea {
   inset: 0;
   pointer-events: none;
   content: "";
-  background-image: radial-gradient(circle at center, rgba(149, 113, 79, 0.10) 1px, transparent 1px);
-  background-size: 22px 22px;
-  mask-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent);
-  opacity: 0.5;
+  background:
+    linear-gradient(90deg, transparent 0 36%, rgba(140, 145, 108, 0.18) 36% 100%),
+    radial-gradient(circle at center, rgba(149, 113, 79, 0.10) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    22px 22px;
+  mask-image: linear-gradient(90deg, transparent, black 14%, black 88%, transparent);
+  opacity: 0.72;
 }
 
 .section-band > * {
@@ -107,9 +139,9 @@ textarea {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(90deg, transparent, rgba(234, 222, 208, 0.18), transparent);
+  background: linear-gradient(90deg, transparent, rgba(234, 222, 208, 0.20), transparent);
   transform: translateX(-100%);
-  animation: sale-ribbon-shine 2200ms ease 650ms both;
+  animation: sale-ribbon-shine 2400ms ease 650ms both;
 }
 
 .sale-ribbon > * {
@@ -117,16 +149,16 @@ textarea {
 }
 
 .sale-highlight {
-  box-shadow: 0 10px 26px rgba(140, 145, 108, 0.24);
+  box-shadow: 0 12px 28px rgba(149, 113, 79, 0.24);
 }
 
 .input-field {
   width: 100%;
   border-radius: 1.1rem;
-  border: 1px solid rgba(199, 175, 148, 0.58);
-  background: rgba(234, 222, 208, 0.82);
+  border: 1px solid rgba(149, 113, 79, 0.38);
+  background: rgba(234, 222, 208, 0.96);
   padding: 0.95rem 1rem;
-  color: var(--cocoa);
+  color: #95714F;
   outline: none;
   transition:
     border-color 180ms ease,
@@ -135,13 +167,13 @@ textarea {
 }
 
 .input-field::placeholder {
-  color: rgba(149, 113, 79, 0.46);
+  color: rgba(149, 113, 79, 0.64);
 }
 
 .input-field:focus {
-  border-color: rgba(140, 145, 108, 0.68);
-  background: rgba(234, 222, 208, 0.98);
-  box-shadow: 0 0 0 4px rgba(140, 145, 108, 0.14);
+  border-color: rgba(140, 145, 108, 0.84);
+  background: #EADED0;
+  box-shadow: 0 0 0 4px rgba(140, 145, 108, 0.18);
 }
 
 .reveal {
