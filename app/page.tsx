@@ -469,7 +469,7 @@ export default function Home() {
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-caramel/15 bg-almond/92 shadow-[0_14px_40px_rgba(149,113,79,0.08)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-earth/15 bg-cream/95 shadow-[0_14px_40px_rgba(47,53,36,0.10)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <BrandMark />
           <nav className="hidden items-center gap-7 lg:flex">
@@ -547,19 +547,19 @@ export default function Home() {
         <div className="absolute right-0 top-32 -z-10 h-[34rem] w-[34rem] rounded-full bg-sage/20 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="reveal">
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-caramel/25 bg-almond/88 px-4 py-2 text-sm font-semibold text-cocoa shadow-sm backdrop-blur">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-earth/20 bg-cream px-4 py-2 text-sm font-bold text-cocoa shadow-sm backdrop-blur">
               <span className="h-2.5 w-2.5 rounded-full bg-lamp shadow-[0_0_18px_rgba(172,176,135,0.90)]" />
               Авторские раскраски по номерам для спокойных вечеров
             </div>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-cocoa sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-4xl text-5xl font-bold leading-[1.02] tracking-tight text-cocoa sm:text-6xl lg:text-7xl">
               Раскрась тёплые воспоминания
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-cocoa sm:text-xl">
+            <p className="mt-7 max-w-3xl text-lg font-medium leading-8 text-cocoa sm:text-xl">
               Авторская раскраска по номерам про мгновения, когда за окном моросит
               дождь, когда одолевает тревога или, наоборот, когда на сердце так легко
               и хорошо, что хочется продлить это мгновение.
             </p>
-            <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-caramel/20 bg-almond/90 p-5 text-base font-medium leading-7 text-cocoa shadow-sm">
+            <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-earth/18 bg-cream p-5 text-base font-bold leading-7 text-cocoa shadow-sm">
               Это не просто раскраска. Это спокойный вечер, чашка чая и
               ощущение, будто ты снова дома.
             </p>
@@ -572,7 +572,7 @@ export default function Home() {
               </a>
               <a
                 href="#gallery"
-                className="rounded-full border border-caramel/35 bg-almond/90 px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/40 hover:text-burgundy"
+                className="rounded-full border border-earth/25 bg-cream px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/60 hover:bg-almond"
               >
                 Посмотреть галерею
               </a>
