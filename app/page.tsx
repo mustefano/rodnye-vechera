@@ -542,11 +542,11 @@ export default function Home() {
         )}
       </header>
 
-      <section className="relative px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
+      <section className="hero-section relative px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
         <div className="absolute left-0 top-0 -z-10 h-[46rem] w-[46rem] rounded-full bg-lamp/35 blur-3xl" />
         <div className="absolute right-0 top-32 -z-10 h-[34rem] w-[34rem] rounded-full bg-sage/20 blur-3xl" />
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
-          <div className="reveal">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,0.96fr)_minmax(360px,0.9fr)] xl:gap-16">
+          <div className="reveal hero-copy-panel max-w-[760px]">
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-earth/20 bg-cream px-4 py-2 text-sm font-bold text-cocoa shadow-sm backdrop-blur">
               <span className="h-2.5 w-2.5 rounded-full bg-lamp shadow-[0_0_18px_rgba(172,176,135,0.90)]" />
               Авторские раскраски по номерам для спокойных вечеров
@@ -559,7 +559,7 @@ export default function Home() {
               дождь, когда одолевает тревога или, наоборот, когда на сердце так легко
               и хорошо, что хочется продлить это мгновение.
             </p>
-            <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-earth/18 bg-cream p-5 text-base font-bold leading-7 text-cocoa shadow-sm">
+            <p className="mt-5 max-w-[650px] rounded-[1.5rem] border border-earth/18 bg-cream/96 p-5 text-base font-bold leading-7 text-cocoa shadow-sm">
               Это не просто раскраска. Это спокойный вечер, чашка чая и
               ощущение, будто ты снова дома.
             </p>
@@ -577,11 +577,11 @@ export default function Home() {
                 Посмотреть галерею
               </a>
             </div>
-            <div className="mt-9 grid gap-3 sm:grid-cols-2 lg:max-w-2xl">
+            <div className="mt-9 grid max-w-[650px] gap-3 sm:grid-cols-2">
               {heroBenefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 rounded-2xl border border-caramel/15 bg-almond/88 px-4 py-3 text-sm font-semibold text-cocoa shadow-sm backdrop-blur"
+                  className="flex items-center gap-3 rounded-2xl border border-earth/12 bg-cream/96 px-4 py-3 text-sm font-bold text-cocoa shadow-sm backdrop-blur"
                 >
                   <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-lamp/70 text-burgundy">
                     ✓
@@ -781,14 +781,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section className="order-section px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionHeading title="Как оформить заказ" />
           <div className="grid gap-4 md:grid-cols-4">
             {orderSteps.map((step, index) => (
               <div
                 key={step}
-                className="reveal relative rounded-[1.75rem] border border-caramel/15 bg-almond/90 p-6 shadow-[0_20px_55px_rgba(149,113,79,0.08)]"
+                className="reveal relative rounded-[1.75rem] border border-earth/12 bg-cream/96 p-6 shadow-[0_20px_55px_rgba(47,53,36,0.10)] backdrop-blur"
               >
                 <span className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-burgundy text-lg font-bold text-cream">
                   {index + 1}
