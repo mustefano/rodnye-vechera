@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const menuItems = [
@@ -248,13 +249,35 @@ function BrandMark() {
       </span>
       <span>
         <span className="block text-lg font-semibold leading-tight text-cocoa">
-          Родные вечера
+          Ностальгия красками
         </span>
         <span className="hidden text-xs leading-tight text-cocoa/60 sm:block">
-          раскраски по номерам о доме, где всегда тепло
+          авторская раскраска по номерам, которая всегда будет рядом
         </span>
       </span>
     </a>
+  );
+}
+
+
+function HeroCover() {
+  return (
+    <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[470px]">
+      <div className="absolute inset-0 rounded-[2.2rem] bg-[linear-gradient(145deg,#fff9ed,#f0d2aa_58%,#8f3f44)] shadow-[0_30px_80px_rgba(91,52,35,0.2)]" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/60 p-3 shadow-[0_30px_80px_rgba(91,52,35,0.22)] backdrop-blur">
+        <div className="absolute inset-0 paper-noise opacity-25" />
+        <div className="relative overflow-hidden rounded-[1.6rem]">
+          <Image
+            src="/nostalgia-cover.jpg"
+            alt="Обложка выпуска №1 Ностальгия красками"
+            width={924}
+            height={1329}
+            priority
+            className="h-auto w-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -438,7 +461,7 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 paper-noise opacity-70" />
 
       <div className="bg-cocoa px-4 py-2 text-center text-sm font-medium text-cream">
-        Тёплый старт продаж: стикерпак к каждому выпуску и бережная упаковка
+        Старт продаж уже в августе: музыкальный плейлист в каждом выпуске и бережная упаковка
       </div>
 
       <header className="sticky top-0 z-50 border-b border-caramel/15 bg-milk/78 shadow-[0_14px_40px_rgba(91,52,35,0.08)] backdrop-blur-xl">
@@ -524,11 +547,12 @@ export default function Home() {
               Авторские раскраски по номерам для спокойных вечеров
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-cocoa sm:text-6xl lg:text-7xl">
-              Раскрась тёплые семейные воспоминания
+              Раскрась тёплые воспоминания
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-cocoa/72 sm:text-xl">
-              Авторские раскраски по номерам про уютные кухни, дачные вечера,
-              семейные разговоры и моменты, которые хочется сохранить.
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-cocoa/72 sm:text-xl">
+              Авторская раскраска по номерам про мгновения, когда за окном моросит
+              дождь, когда одолевает тревога или, наоборот, когда на сердце так легко
+              и хорошо, что хочется продлить это мгновение.
             </p>
             <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-caramel/20 bg-cream/70 p-5 text-base font-medium leading-7 text-cocoa shadow-sm">
               Это не просто раскраска. Это спокойный вечер, чашка чая и
@@ -563,15 +587,7 @@ export default function Home() {
             </div>
           </div>
           <div className="reveal relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="absolute -left-8 top-10 z-10 hidden rounded-3xl border border-white/70 bg-cream/90 p-4 shadow-xl backdrop-blur sm:block">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-burgundy">
-                доверие
-              </p>
-              <p className="mt-1 text-sm font-semibold text-cocoa">
-                без чужих кадров и логотипов
-              </p>
-            </div>
-            <ProductArtwork />
+            <HeroCover />
           </div>
         </div>
       </section>
