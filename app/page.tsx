@@ -225,7 +225,7 @@ function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-cocoa/70 sm:text-lg">
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-cocoa sm:text-lg">
           {description}
         </p>
       )}
@@ -251,7 +251,7 @@ function BrandMark() {
         <span className="block text-lg font-semibold leading-tight text-cocoa">
           Ностальгия красками
         </span>
-        <span className="hidden text-xs leading-tight text-cocoa/60 sm:block">
+        <span className="hidden text-xs leading-tight text-cocoa sm:block">
           авторская раскраска по номерам, которая всегда будет рядом
         </span>
       </span>
@@ -264,7 +264,7 @@ function HeroCover() {
   return (
     <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[470px]">
       <div className="absolute inset-0 rounded-[2.2rem] bg-[linear-gradient(145deg,#EADED0,#C7AF94_58%,#95714F)] shadow-[0_30px_80px_rgba(149,113,79,0.20)]" />
-      <div className="relative overflow-hidden rounded-[2rem] border border-cream/70 bg-cream/60 p-3 shadow-[0_30px_80px_rgba(149,113,79,0.22)] backdrop-blur">
+      <div className="relative overflow-hidden rounded-[2rem] border border-sand/60 bg-almond/88 p-3 shadow-[0_30px_80px_rgba(149,113,79,0.22)] backdrop-blur">
         <div className="absolute inset-0 paper-noise opacity-25" />
         <div className="relative overflow-hidden rounded-[1.6rem]">
           <Image
@@ -286,7 +286,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-[2rem] border border-cream/70 bg-[linear-gradient(145deg,#EADED0,#C7AF94_55%,#95714F)] shadow-[0_30px_80px_rgba(149,113,79,0.22)] ${
+      className={`relative overflow-hidden rounded-[2rem] border border-sand/60 bg-[linear-gradient(145deg,#EADED0,#C7AF94_55%,#95714F)] shadow-[0_30px_80px_rgba(149,113,79,0.22)] ${
         isSmall ? "aspect-[4/3] p-4" : "aspect-[4/5] p-5"
       }`}
     >
@@ -299,7 +299,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
         Авторский выпуск
       </div>
       <div
-        className={`relative flex h-full flex-col justify-between rounded-[1.5rem] border border-caramel/25 bg-cream/85 shadow-inner ${
+        className={`relative flex h-full flex-col justify-between rounded-[1.5rem] border border-caramel/25 bg-almond/95 shadow-inner ${
           isSmall ? "p-4" : "p-5"
         }`}
       >
@@ -312,7 +312,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
           >
             Ностальгия красками
           </p>
-          <p className={`${isSmall ? "mt-1 text-xs" : "mt-2 text-sm"} text-cocoa/60`}>
+          <p className={`${isSmall ? "mt-1 text-xs" : "mt-2 text-sm"} text-cocoa`}>
             выпуск с тёплыми сценами
           </p>
         </div>
@@ -324,7 +324,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
           <svg
             aria-hidden="true"
             viewBox="0 0 280 190"
-            className="absolute inset-0 h-full w-full p-5 text-cocoa/80"
+            className="absolute inset-0 h-full w-full p-5 text-cocoa"
           >
             <path
               d="M36 111 140 38l104 73"
@@ -359,13 +359,13 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
           />
         </div>
         <div
-          className={`grid grid-cols-3 gap-2 text-center font-semibold text-cocoa/70 ${
+          className={`grid grid-cols-3 gap-2 text-center font-semibold text-cocoa ${
             isSmall ? "mt-3 text-[0.65rem]" : "text-xs"
           }`}
         >
-          <span className="rounded-full bg-cream/70 px-2 py-2">А4</span>
-          <span className="rounded-full bg-cream/70 px-2 py-2">25 сцен</span>
-          <span className="rounded-full bg-cream/70 px-2 py-2">подарок</span>
+          <span className="rounded-full bg-almond/90 px-2 py-2">А4</span>
+          <span className="rounded-full bg-almond/90 px-2 py-2">25 сцен</span>
+          <span className="rounded-full bg-almond/90 px-2 py-2">подарок</span>
         </div>
       </div>
     </div>
@@ -386,7 +386,7 @@ function LineArt({ colored = false }: { colored?: boolean }) {
         aria-hidden="true"
         viewBox="0 0 360 250"
         className={`relative h-full min-h-64 w-full ${
-          colored ? "text-cocoa/65" : "text-cocoa/80"
+          colored ? "text-cocoa" : "text-cocoa"
         }`}
       >
         <path d="M35 188h290" className="fill-none stroke-current stroke-[4]" />
@@ -427,13 +427,13 @@ function GalleryArtwork({ label, index }: { label: string; index: number }) {
   ];
 
   return (
-    <div className="group relative min-h-64 overflow-hidden rounded-[1.7rem] border border-cream/70 bg-cream p-3 shadow-[0_24px_60px_rgba(149,113,79,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.18)]">
+    <div className="group relative min-h-64 overflow-hidden rounded-[1.7rem] border border-sand/60 bg-cream p-3 shadow-[0_24px_60px_rgba(149,113,79,0.12)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.18)]">
       <div className={`relative h-full overflow-hidden rounded-[1.35rem] bg-gradient-to-br ${themes[index]}`}>
         <div className="absolute inset-0 paper-noise opacity-50" />
         <svg
           aria-hidden="true"
           viewBox="0 0 300 220"
-          className="absolute inset-0 h-full w-full p-7 text-cocoa/55 transition duration-300 group-hover:scale-[1.03]"
+          className="absolute inset-0 h-full w-full p-7 text-cocoa transition duration-300 group-hover:scale-[1.03]"
         >
           <path d="M31 170h236" className="fill-none stroke-current stroke-[4]" />
           <path d="M64 170V82h156v88" className="fill-[#EADED0]/70 stroke-current stroke-[4]" />
@@ -442,7 +442,7 @@ function GalleryArtwork({ label, index }: { label: string; index: number }) {
           <path d="M217 151c23-4 37 7 36 24M65 150c-17 1-27 9-29 25" className="fill-none stroke-current stroke-[4]" />
           <path d="M116 188c38-14 70-13 102 0" className="fill-none stroke-current stroke-[3]" />
         </svg>
-        <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-cream/80 px-4 py-3 text-sm font-semibold text-cocoa shadow-lg backdrop-blur">
+        <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-full bg-almond/94 px-4 py-3 text-sm font-semibold text-cocoa shadow-lg backdrop-blur">
           <span>{label}</span>
           <span className="h-2 w-2 rounded-full bg-burgundy" />
         </div>
@@ -457,21 +457,19 @@ export default function Home() {
   const [compare, setCompare] = useState(54);
 
   return (
-    <main id="top" className="min-h-screen overflow-hidden bg-milk text-cocoa">
+    <main id="top" className="palette-shell min-h-screen overflow-hidden text-cocoa">
       <div className="fixed inset-0 -z-10 paper-noise opacity-70" />
 
-      <div className="sale-ribbon bg-cocoa px-4 py-3 text-center text-cream shadow-[0_10px_30px_rgba(149,113,79,0.22)]">
-        <span className="inline-flex flex-wrap items-center justify-center gap-2 text-sm font-semibold sm:text-base">
-          <span className="sale-highlight rounded-full border border-cream/45 bg-cream/20 px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-cream sm:text-sm">
+      <div className="sale-ribbon bg-cocoa px-4 py-4 text-center text-cream shadow-[0_14px_36px_rgba(149,113,79,0.22)] lg:py-5">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-3 text-base font-bold leading-6 sm:flex-row sm:text-lg">
+          <span className="sale-highlight rounded-full border border-almond bg-almond px-4 py-2 text-sm font-black uppercase tracking-[0.16em] text-earth sm:text-base">
             Старт продаж уже в августе
           </span>
-          <span className="text-cream/90">
-            музыкальный плейлист в каждом выпуске и бережная упаковка
-          </span>
-        </span>
+          <span className="text-almond">музыкальный плейлист в каждом выпуске и бережная упаковка</span>
+        </div>
       </div>
 
-      <header className="sticky top-0 z-50 border-b border-caramel/15 bg-milk/78 shadow-[0_14px_40px_rgba(149,113,79,0.08)] backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-caramel/15 bg-almond/92 shadow-[0_14px_40px_rgba(149,113,79,0.08)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <BrandMark />
           <nav className="hidden items-center gap-7 lg:flex">
@@ -479,7 +477,7 @@ export default function Home() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-semibold text-cocoa/70 transition hover:text-burgundy"
+                className="text-sm font-semibold text-cocoa transition hover:text-burgundy"
               >
                 {item.label}
               </a>
@@ -488,7 +486,7 @@ export default function Home() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href="#request"
-              className="rounded-full bg-burgundy px-6 py-3 text-sm font-bold text-cream shadow-[0_16px_30px_rgba(149,113,79,0.20)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
+              className="rounded-full bg-burgundy px-6 py-3 text-sm font-bold text-cream shadow-[0_16px_30px_rgba(149,113,79,0.20)] transition hover:-translate-y-0.5 hover:bg-earth"
             >
               Заказать
             </a>
@@ -498,7 +496,7 @@ export default function Home() {
             aria-label="Открыть меню"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((value) => !value)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-caramel/30 bg-cream/70 text-cocoa shadow-sm lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-caramel/30 bg-almond/90 text-cocoa shadow-sm lg:hidden"
           >
             <span className="relative h-4 w-5">
               <span
@@ -527,7 +525,7 @@ export default function Home() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-base font-semibold text-cocoa transition hover:bg-cream"
+                  className="rounded-2xl px-4 py-3 text-base font-semibold text-cocoa transition hover:bg-sand/55"
                 >
                   {item.label}
                 </a>
@@ -549,32 +547,32 @@ export default function Home() {
         <div className="absolute right-0 top-32 -z-10 h-[34rem] w-[34rem] rounded-full bg-sage/20 blur-3xl" />
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="reveal">
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-caramel/25 bg-cream/60 px-4 py-2 text-sm font-semibold text-cocoa shadow-sm backdrop-blur">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-caramel/25 bg-almond/88 px-4 py-2 text-sm font-semibold text-cocoa shadow-sm backdrop-blur">
               <span className="h-2.5 w-2.5 rounded-full bg-lamp shadow-[0_0_18px_rgba(172,176,135,0.90)]" />
               Авторские раскраски по номерам для спокойных вечеров
             </div>
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight text-cocoa sm:text-6xl lg:text-7xl">
               Раскрась тёплые воспоминания
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-cocoa/72 sm:text-xl">
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-cocoa sm:text-xl">
               Авторская раскраска по номерам про мгновения, когда за окном моросит
               дождь, когда одолевает тревога или, наоборот, когда на сердце так легко
               и хорошо, что хочется продлить это мгновение.
             </p>
-            <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-caramel/20 bg-cream/70 p-5 text-base font-medium leading-7 text-cocoa shadow-sm">
+            <p className="mt-5 max-w-2xl rounded-[1.5rem] border border-caramel/20 bg-almond/90 p-5 text-base font-medium leading-7 text-cocoa shadow-sm">
               Это не просто раскраска. Это спокойный вечер, чашка чая и
               ощущение, будто ты снова дома.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#catalog"
-                className="rounded-full bg-burgundy px-8 py-4 text-center text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.25)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
+                className="rounded-full bg-burgundy px-8 py-4 text-center text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.25)] transition hover:-translate-y-0.5 hover:bg-earth"
               >
                 Выбрать выпуск
               </a>
               <a
                 href="#gallery"
-                className="rounded-full border border-caramel/35 bg-cream/70 px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/40 hover:text-burgundy"
+                className="rounded-full border border-caramel/35 bg-almond/90 px-8 py-4 text-center text-base font-bold text-cocoa shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-burgundy/40 hover:text-burgundy"
               >
                 Посмотреть галерею
               </a>
@@ -583,7 +581,7 @@ export default function Home() {
               {heroBenefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 rounded-2xl border border-caramel/15 bg-cream/55 px-4 py-3 text-sm font-semibold text-cocoa/78 shadow-sm backdrop-blur"
+                  className="flex items-center gap-3 rounded-2xl border border-caramel/15 bg-almond/88 px-4 py-3 text-sm font-semibold text-cocoa shadow-sm backdrop-blur"
                 >
                   <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-lamp/70 text-burgundy">
                     ✓
@@ -609,13 +607,13 @@ export default function Home() {
             {reasons.map((reason) => (
               <article
                 key={reason.title}
-                className="reveal rounded-[1.75rem] border border-cream/70 bg-cream/68 p-6 shadow-[0_22px_60px_rgba(149,113,79,0.09)] backdrop-blur transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.14)]"
+                className="reveal rounded-[1.75rem] border border-sand/60 bg-almond/88 p-6 shadow-[0_22px_60px_rgba(149,113,79,0.09)] backdrop-blur transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(149,113,79,0.14)]"
               >
                 <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-lamp/45 text-burgundy">
                   <WarmIcon type={reason.icon} />
                 </div>
                 <h3 className="text-xl font-semibold text-cocoa">{reason.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-cocoa/67">{reason.text}</p>
+                <p className="mt-3 text-sm leading-7 text-cocoa">{reason.text}</p>
               </article>
             ))}
           </div>
@@ -625,7 +623,7 @@ export default function Home() {
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="reveal">
-            <div className="relative rounded-[2rem] border border-cream/80 bg-cream/50 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
+            <div className="relative rounded-[2rem] border border-sand/70 bg-cream/50 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
               <div className="grid gap-4 sm:grid-cols-2">
                 <LineArt />
                 <div className="hidden sm:block">
@@ -648,7 +646,7 @@ export default function Home() {
               {insideItems.map((item) => (
                 <div
                   key={item}
-                  className="flex items-start gap-3 rounded-2xl border border-caramel/15 bg-cream/70 px-4 py-3 text-sm font-semibold text-cocoa/78"
+                  className="flex items-start gap-3 rounded-2xl border border-caramel/15 bg-almond/90 px-4 py-3 text-sm font-semibold text-cocoa"
                 >
                   <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-sage/18 text-sage">
                     ✓
@@ -657,7 +655,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 rounded-2xl border border-burgundy/12 bg-burgundy/5 p-4 text-sm leading-7 text-cocoa/68">
+            <p className="mt-6 rounded-2xl border border-burgundy/12 bg-burgundy/5 p-4 text-sm leading-7 text-cocoa">
               Фломастеры и карандаши не входят в комплект, чтобы вы могли
               выбрать любимые материалы сами.
             </p>
@@ -671,7 +669,7 @@ export default function Home() {
             title="Из чёрно-белой страницы - в тёплую историю"
             description="С каждым цветом обычный контур превращается в маленькое воспоминание."
           />
-          <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-cream/75 bg-cream/70 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
+          <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-sand/70 bg-almond/90 p-5 shadow-[0_30px_80px_rgba(149,113,79,0.12)]">
             <div className="relative overflow-hidden rounded-[1.55rem]">
               <LineArt />
               <div
@@ -690,7 +688,7 @@ export default function Home() {
                   ↔
                 </div>
               </div>
-              <div className="absolute left-5 top-5 rounded-full bg-cream/88 px-4 py-2 text-sm font-bold text-cocoa shadow">
+              <div className="absolute left-5 top-5 rounded-full bg-almond/95 px-4 py-2 text-sm font-bold text-cocoa shadow">
                 До
               </div>
               <div className="absolute right-5 top-5 rounded-full bg-burgundy px-4 py-2 text-sm font-bold text-cream shadow">
@@ -704,7 +702,7 @@ export default function Home() {
               max="82"
               value={compare}
               onChange={(event) => setCompare(Number(event.target.value))}
-              className="mt-6 w-full accent-[#95714F]"
+              className="mt-6 w-full accent-[#8C916C]"
             />
           </div>
         </div>
@@ -721,7 +719,7 @@ export default function Home() {
             {products.map((product) => (
               <article
                 key={product.name}
-                className="reveal group flex flex-col overflow-hidden rounded-[2rem] border border-cream/75 bg-cream/75 shadow-[0_26px_70px_rgba(149,113,79,0.11)] backdrop-blur transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_34px_85px_rgba(149,113,79,0.18)]"
+                className="reveal group flex flex-col overflow-hidden rounded-[2rem] border border-sand/70 bg-almond/94 shadow-[0_26px_70px_rgba(149,113,79,0.11)] backdrop-blur transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_34px_85px_rgba(149,113,79,0.18)]"
               >
                 <div className="p-4">
                   <ProductArtwork variant="small" />
@@ -736,12 +734,12 @@ export default function Home() {
                   <h3 className="text-2xl font-semibold tracking-tight text-cocoa">
                     {product.name}
                   </h3>
-                  <p className="mt-4 text-sm leading-7 text-cocoa/67">
+                  <p className="mt-4 text-sm leading-7 text-cocoa">
                     {product.description}
                   </p>
                   <ul className="mt-5 grid gap-2">
                     {productList.map((item) => (
-                      <li key={item} className="flex items-center gap-3 text-sm text-cocoa/75">
+                      <li key={item} className="flex items-center gap-3 text-sm text-cocoa">
                         <span className="h-1.5 w-1.5 rounded-full bg-burgundy" />
                         {item}
                       </li>
@@ -751,7 +749,7 @@ export default function Home() {
                     <span className="text-4xl font-semibold text-cocoa">
                       {product.price}
                     </span>
-                    <span className="pb-1 text-lg font-medium text-cocoa/38 line-through">
+                    <span className="pb-1 text-lg font-medium text-cocoa line-through">
                       {product.oldPrice}
                     </span>
                   </div>
@@ -790,7 +788,7 @@ export default function Home() {
             {orderSteps.map((step, index) => (
               <div
                 key={step}
-                className="reveal relative rounded-[1.75rem] border border-caramel/15 bg-cream/70 p-6 shadow-[0_20px_55px_rgba(149,113,79,0.08)]"
+                className="reveal relative rounded-[1.75rem] border border-caramel/15 bg-almond/90 p-6 shadow-[0_20px_55px_rgba(149,113,79,0.08)]"
               >
                 <span className="mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-burgundy text-lg font-bold text-cream">
                   {index + 1}
@@ -809,10 +807,10 @@ export default function Home() {
             {deliveryCards.map((card) => (
               <article
                 key={card.title}
-                className="reveal rounded-[1.75rem] border border-cream/70 bg-cream/65 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
+                className="reveal rounded-[1.75rem] border border-sand/60 bg-almond/88 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
               >
                 <h3 className="text-2xl font-semibold text-cocoa">{card.title}</h3>
-                <p className="mt-4 leading-7 text-cocoa/67">{card.text}</p>
+                <p className="mt-4 leading-7 text-cocoa">{card.text}</p>
               </article>
             ))}
           </div>
@@ -826,14 +824,14 @@ export default function Home() {
             {reviews.map((review, index) => (
               <figure
                 key={review}
-                className="reveal rounded-[1.75rem] border border-caramel/15 bg-cream/72 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
+                className="reveal rounded-[1.75rem] border border-caramel/15 bg-almond/92 p-7 shadow-[0_22px_60px_rgba(149,113,79,0.09)]"
               >
                 <div className="mb-6 flex gap-1 text-lamp">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <span key={starIndex}>★</span>
                   ))}
                 </div>
-                <blockquote className="text-lg leading-8 text-cocoa/76">
+                <blockquote className="text-lg leading-8 text-cocoa">
                   “{review}”
                 </blockquote>
                 <figcaption className="mt-6 text-sm font-bold text-burgundy">
@@ -854,7 +852,7 @@ export default function Home() {
               return (
                 <div
                   key={item.question}
-                  className="rounded-[1.5rem] border border-cream/70 bg-cream/70 shadow-[0_16px_45px_rgba(149,113,79,0.08)]"
+                  className="rounded-[1.5rem] border border-sand/60 bg-almond/90 shadow-[0_16px_45px_rgba(149,113,79,0.08)]"
                 >
                   <button
                     type="button"
@@ -874,7 +872,7 @@ export default function Home() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-6 pb-6 leading-7 text-cocoa/68">
+                      <p className="px-6 pb-6 leading-7 text-cocoa">
                         {item.answer}
                       </p>
                     </div>
@@ -887,7 +885,7 @@ export default function Home() {
       </section>
 
       <section id="request" className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.25rem] border border-cream/70 bg-[linear-gradient(135deg,rgba(234,222,208,0.90),rgba(199,175,148,0.72))] p-5 shadow-[0_30px_90px_rgba(149,113,79,0.14)] md:p-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.25rem] border border-sand/60 bg-[linear-gradient(135deg,rgba(234,222,208,0.90),rgba(199,175,148,0.72))] p-5 shadow-[0_30px_90px_rgba(149,113,79,0.14)] md:p-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded-[1.75rem] bg-burgundy p-8 text-cream shadow-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-lamp">
               заявка
@@ -895,26 +893,26 @@ export default function Home() {
             <h2 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
               Оставьте заявку - и мы поможем выбрать выпуск
             </h2>
-            <p className="mt-5 leading-8 text-cream/78">
+            <p className="mt-5 leading-8 text-cream">
               Мы не спамим. Свяжемся только по вашему заказу.
             </p>
-            <div className="mt-8 rounded-3xl bg-cream/10 p-5 text-sm leading-7 text-cream/78">
+            <div className="mt-8 rounded-3xl bg-cream/10 p-5 text-sm leading-7 text-cream">
               На первом сообщении уточним выпуск, город доставки и удобный
               способ оплаты.
             </div>
           </div>
-          <form className="grid gap-4 rounded-[1.75rem] bg-cream/72 p-5 md:p-7">
+          <form className="grid gap-4 rounded-[1.75rem] bg-almond/92 p-5 md:p-7">
             <div className="grid gap-4 md:grid-cols-2">
-              <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
+              <label className="grid gap-2 text-sm font-semibold text-cocoa">
                 Имя
                 <input className="input-field" name="name" placeholder="Анна" />
               </label>
-              <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
+              <label className="grid gap-2 text-sm font-semibold text-cocoa">
                 Телефон
                 <input className="input-field" name="phone" placeholder="+7" />
               </label>
             </div>
-            <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
+            <label className="grid gap-2 text-sm font-semibold text-cocoa">
               Telegram или email
               <input
                 className="input-field"
@@ -922,7 +920,7 @@ export default function Home() {
                 placeholder="@username или почта"
               />
             </label>
-            <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
+            <label className="grid gap-2 text-sm font-semibold text-cocoa">
               Выбор выпуска
               <select className="input-field" name="release" defaultValue="">
                 <option value="" disabled>
@@ -933,7 +931,7 @@ export default function Home() {
                 <option>Выпуск #3 - Вечер на кухне</option>
               </select>
             </label>
-            <label className="grid gap-2 text-sm font-semibold text-cocoa/70">
+            <label className="grid gap-2 text-sm font-semibold text-cocoa">
               Комментарий
               <textarea
                 className="input-field min-h-28 resize-none"
@@ -941,13 +939,13 @@ export default function Home() {
                 placeholder="Например: хочу в подарок"
               />
             </label>
-            <label className="flex items-start gap-3 text-sm leading-6 text-cocoa/66">
+            <label className="flex items-start gap-3 text-sm leading-6 text-cocoa">
               <input type="checkbox" className="mt-1 accent-[#95714F]" />
               Я согласен с политикой конфиденциальности
             </label>
             <button
               type="button"
-              className="rounded-full bg-burgundy px-7 py-4 text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.23)] transition hover:-translate-y-0.5 hover:bg-[#8C916C]"
+              className="rounded-full bg-burgundy px-7 py-4 text-base font-bold text-cream shadow-[0_18px_38px_rgba(149,113,79,0.23)] transition hover:-translate-y-0.5 hover:bg-earth"
             >
               Отправить заявку
             </button>
@@ -973,7 +971,7 @@ export default function Home() {
               </a>
               <a
                 href="#faq"
-                className="rounded-full border border-caramel/35 bg-cream/70 px-7 py-4 text-center font-bold text-cocoa"
+                className="rounded-full border border-caramel/35 bg-almond/90 px-7 py-4 text-center font-bold text-cocoa"
               >
                 Задать вопрос
               </a>
@@ -983,7 +981,7 @@ export default function Home() {
             {contactItems.map(([label, value]) => (
               <div
                 key={label}
-                className="rounded-[1.5rem] border border-cream/70 bg-cream/70 p-6 shadow-[0_18px_50px_rgba(149,113,79,0.08)]"
+                className="rounded-[1.5rem] border border-sand/60 bg-almond/90 p-6 shadow-[0_18px_50px_rgba(149,113,79,0.08)]"
               >
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-burgundy">
                   {label}
@@ -999,17 +997,17 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <h2 className="text-3xl font-semibold">Ностальгия красками</h2>
-            <p className="mt-4 max-w-xl leading-7 text-cream/70">
+            <p className="mt-4 max-w-xl leading-7 text-cream">
               Авторские раскраски по номерам о доме, уюте и тёплых семейных
               историях.
             </p>
-            <p className="mt-6 max-w-3xl text-sm leading-7 text-cream/55">
+            <p className="mt-6 max-w-3xl text-sm leading-7 text-cream">
               Проект является самостоятельным авторским продуктом и не
               использует названия, кадры, логотипы, персонажей, лица актёров
               или цитаты из сторонних произведений.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-cream/78 sm:grid-cols-3 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-cream sm:grid-cols-3 lg:grid-cols-2">
             {[
               "Каталог",
               "Доставка",
