@@ -50,7 +50,7 @@ const insideItems = [
   "формат А4",
   "музыкальный плейлист",
   "аккуратная упаковка",
-  "инструкция для первого раскрашивания",
+  "советы для разукрашивания",
 ];
 
 const products = [
@@ -419,24 +419,21 @@ function LineArt({ colored = false }: { colored?: boolean }) {
 function PreviewArtwork({
   src,
   alt,
-  label,
 }: {
   src: string;
   alt: string;
-  label: string;
 }) {
   return (
-    <div className="relative min-h-72 overflow-hidden rounded-[1.55rem] border border-white/75 bg-cream shadow-[inset_0_0_0_1px_rgba(79,86,58,0.08)]">
-      <div className="absolute inset-0 paper-noise opacity-25" />
-      <Image
-        src={src}
-        alt={alt}
-        width={1600}
-        height={1150}
-        className="relative h-full min-h-72 w-full object-contain p-3"
-      />
-      <div className="absolute bottom-4 left-4 rounded-full border border-white/70 bg-cream/88 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-cocoa shadow-sm backdrop-blur">
-        {label}
+    <div className="relative overflow-hidden rounded-[1.65rem] border border-white/75 bg-cream shadow-[0_22px_55px_rgba(79,86,58,0.13)]">
+      <div className="absolute inset-0 paper-noise opacity-18" />
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.45rem] bg-white/80">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 46vw"
+          className="object-contain"
+        />
       </div>
     </div>
   );
@@ -642,19 +639,17 @@ export default function Home() {
       </section>
 
       <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="reveal">
             <div className="relative rounded-[2rem] border border-white/80 bg-white/50 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-5">
                 <PreviewArtwork
                   src="/painted-preview.png"
                   alt="Цветной пример готовой раскраски"
-                  label="готовый пример"
                 />
                 <PreviewArtwork
                   src="/outline-preview.png"
                   alt="Чёрно-белая страница раскраски по номерам"
-                  label="лист по номерам"
                 />
               </div>
               <div className="absolute -bottom-5 left-8 rounded-full bg-burgundy px-5 py-3 text-sm font-bold text-cream shadow-xl">
