@@ -21,29 +21,29 @@ const heroBenefits = [
 
 const reasons = [
   {
-    title: "Уют вместо суеты",
+    title: "Уютный вечер",
     text: "Раскраска помогает отвлечься от телефона, дел и постоянного шума.",
     icon: "lamp",
   },
   {
-    title: "Понятно даже новичку",
+    title: "Для любого уровня сложности",
     text: "Каждый участок пронумерован - просто выбирайте цвет и закрашивайте.",
     icon: "pencil",
   },
   {
-    title: "Ностальгия без прямых отсылок",
-    text: "Сцены вдохновлены атмосферой семейного тепла, деревенского быта и добрых историй.",
+    title: "Ностальгия в деталях",
+    text: "Сцены вдохновлены атмосферой семейного тепла, добрых историй, улыбок и споров.",
     icon: "home",
   },
   {
-    title: "Готовая картина своими руками",
-    text: "После раскрашивания страницы можно сохранить, подарить или оформить в рамку.",
+    title: "От чёрно-белого листа до личного шедевра",
+    text: "Вы создаёте свой шедевр шаг за шагом.",
     icon: "frame",
   },
 ];
 
 const insideItems = [
-  "25 авторских сцен",
+  "17 авторских сцен",
   "пронумерованные зоны для раскрашивания",
   "палитра с подсказками",
   "плотная бумага 160 г/м²",
@@ -87,7 +87,7 @@ const products = [
 ];
 
 const productList = [
-  "25 иллюстраций",
+  "17 иллюстраций",
   "формат А4",
   "плотная бумага",
   "палитра с номерами",
@@ -149,7 +149,7 @@ const faqItems = [
   },
   {
     question: "Какой формат у раскраски?",
-    answer: "Формат А4. В каждом выпуске 25 авторских иллюстраций.",
+    answer: "Формат А4. В каждом выпуске 17 авторских иллюстраций.",
   },
   {
     question: "Можно ли подарить раскраску?",
@@ -364,7 +364,7 @@ function ProductArtwork({ variant = "hero" }: { variant?: string }) {
           }`}
         >
           <span className="rounded-full bg-white/70 px-2 py-2">А4</span>
-          <span className="rounded-full bg-white/70 px-2 py-2">25 сцен</span>
+          <span className="rounded-full bg-white/70 px-2 py-2">17 сцен</span>
           <span className="rounded-full bg-white/70 px-2 py-2">подарок</span>
         </div>
       </div>
@@ -412,6 +412,32 @@ function LineArt({ colored = false }: { colored?: boolean }) {
           className={`fill-none ${colored ? "stroke-[#55734e]" : "stroke-current"} stroke-[4]`}
         />
       </svg>
+    </div>
+  );
+}
+
+function PreviewArtwork({
+  src,
+  alt,
+  label,
+}: {
+  src: string;
+  alt: string;
+  label: string;
+}) {
+  return (
+    <div className="relative min-h-72 overflow-hidden rounded-[1.55rem] border border-white/75 bg-cream shadow-[inset_0_0_0_1px_rgba(79,86,58,0.08)]">
+      <div className="absolute inset-0 paper-noise opacity-25" />
+      <Image
+        src={src}
+        alt={alt}
+        width={1600}
+        height={1150}
+        className="relative h-full min-h-72 w-full object-contain p-3"
+      />
+      <div className="absolute bottom-4 left-4 rounded-full border border-white/70 bg-cream/88 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-cocoa shadow-sm backdrop-blur">
+        {label}
+      </div>
     </div>
   );
 }
@@ -620,10 +646,16 @@ export default function Home() {
           <div className="reveal">
             <div className="relative rounded-[2rem] border border-white/80 bg-white/50 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
               <div className="grid gap-4 sm:grid-cols-2">
-                <LineArt />
-                <div className="hidden sm:block">
-                  <LineArt colored />
-                </div>
+                <PreviewArtwork
+                  src="/painted-preview.png"
+                  alt="Цветной пример готовой раскраски"
+                  label="готовый пример"
+                />
+                <PreviewArtwork
+                  src="/outline-preview.png"
+                  alt="Чёрно-белая страница раскраски по номерам"
+                  label="лист по номерам"
+                />
               </div>
               <div className="absolute -bottom-5 left-8 rounded-full bg-burgundy px-5 py-3 text-sm font-bold text-cream shadow-xl">
                 раскрытая раскраска
