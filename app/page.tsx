@@ -692,28 +692,40 @@ export default function Home() {
             description="С каждым цветом обычный контур превращается в маленькое воспоминание."
           />
           <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-white/75 bg-white/70 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
-            <div className="relative overflow-hidden rounded-[1.55rem]">
-              <LineArt />
+            <div className="relative overflow-hidden rounded-[1.55rem] border border-caramel/15 bg-[#f7f3ea] aspect-[16/10] shadow-[0_22px_55px_rgba(91,52,35,0.10)]">
+              <Image
+                src="/compare-before.png"
+                alt="Чёрно-белая раскраска по номерам"
+                fill
+                sizes="(max-width: 1280px) 100vw, 1100px"
+                className="object-contain"
+                priority={false}
+              />
               <div
-                className="absolute inset-0 overflow-hidden"
-                style={{ width: `${compare}%` }}
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 ${100 - compare}% 0 0)` }}
               >
-                <div className="h-full w-[min(90vw,960px)]">
-                  <LineArt colored />
-                </div>
+                <Image
+                  src="/compare-after.png"
+                  alt="Готовая цветная иллюстрация"
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 1100px"
+                  className="object-contain"
+                  priority={false}
+                />
               </div>
               <div
-                className="absolute inset-y-0 w-1 bg-cream shadow-[0_0_0_1px_rgba(116,37,47,0.25),0_0_30px_rgba(246,196,86,0.9)]"
+                className="absolute inset-y-0 w-1 bg-cream shadow-[0_0_0_1px_rgba(91,86,69,0.22),0_0_26px_rgba(172,176,135,0.55)]"
                 style={{ left: `${compare}%` }}
               >
-                <div className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-burgundy text-sm font-bold text-cream shadow-xl">
+                <div className="absolute left-1/2 top-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-sage text-sm font-bold text-cream shadow-xl">
                   ↔
                 </div>
               </div>
-              <div className="absolute left-5 top-5 rounded-full bg-cream/88 px-4 py-2 text-sm font-bold text-cocoa shadow">
+              <div className="absolute left-5 top-5 rounded-full bg-cream/92 px-4 py-2 text-sm font-bold text-cocoa shadow">
                 До
               </div>
-              <div className="absolute right-5 top-5 rounded-full bg-burgundy px-4 py-2 text-sm font-bold text-cream shadow">
+              <div className="absolute right-5 top-5 rounded-full bg-sage px-4 py-2 text-sm font-bold text-cream shadow">
                 После
               </div>
             </div>
@@ -724,7 +736,7 @@ export default function Home() {
               max="82"
               value={compare}
               onChange={(event) => setCompare(Number(event.target.value))}
-              className="mt-6 w-full accent-[#74252f]"
+              className="mt-6 w-full accent-[#69774f]"
             />
           </div>
         </div>
