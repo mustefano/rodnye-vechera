@@ -694,7 +694,7 @@ export default function Home() {
           <div className="reveal mx-auto max-w-5xl rounded-[2rem] border border-white/75 bg-white/70 p-5 shadow-[0_30px_80px_rgba(91,52,35,0.12)]">
             <div className="relative overflow-hidden rounded-[1.55rem] border border-caramel/15 bg-[#f7f3ea] aspect-[16/10] shadow-[0_22px_55px_rgba(91,52,35,0.10)]">
               <img
-                src="./compare-after.png"
+                src="/rodnye-vechera/compare-after.png"
                 alt="Готовая цветная иллюстрация"
                 className="absolute inset-0 h-full w-full object-contain"
               />
@@ -703,7 +703,7 @@ export default function Home() {
                 style={{ clipPath: `inset(0 ${100 - compare}% 0 0)` }}
               >
                 <img
-                  src="./compare-before.png"
+                  src="/rodnye-vechera/compare-before.png"
                   alt="Чёрно-белая раскраска по номерам"
                   className="absolute inset-0 h-full w-full object-contain"
                 />
